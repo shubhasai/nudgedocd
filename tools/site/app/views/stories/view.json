@@ -1,0 +1,10 @@
+{
+  "title": "Stories",
+  "description": "Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.",
+  "logoUrl": "https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqkmht1701683757281.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=mTU-85NQdowN11x0IDvdcqE0hnUxTfpkx3Iyctmhq0tfVdHnwqCB5fOJmZ6RwP7NQNGf4UdYVSdppPTJpA77kUaFD8Gz5uUnQ7D0fFnC9FSJ9hYEjhr7If9yD2Rh--dNXi788NBN9FoM8ugmyTf2zn8b-wMkIiwS4hlBln2tCxbnm7SudrXCaMoRjraSaqvMMvLyfN6kwrsTauVDAgmgaNTWJmc5bmZmqEMrLSAu1IyfhKIRKiZVK4So49YxfvvaQc9Au6v--TuhtrCCIHzaxZcvgSBwtTyS98RjjKkMV~tje2~EvJw7oWMq0fe960F-AYYm7MSSQsntTLKOP6lyTw__",
+  "tags": ["stories"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}

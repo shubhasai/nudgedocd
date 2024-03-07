@@ -1,0 +1,10 @@
+{
+  "title": "Checklists",
+  "description": "Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.",
+  "logoUrl": "https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqi65r1701683642799.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=jkBbmoR3IGnNU9JNndOSUknIVuLy4Dp3-udZ5vaREXxOZufHzjUbWrgDv9lGGFkX0JZgzyfC7Qysx62U~riWV0LeVNQOsBYXwq~CL4ACHDDCoPFge4uxu4C5vjLtQON7aHTqxVMMRefY02LCPbvblbld7ogaou8EgJo9SWDnyRNNlFsXSuCgjwEGW4LdFMnueaRvVDQC313VoPn-T9SMTtWURGJXwUqaHlTKf6YSU5ajMjTFmo~UPBkD~CWLM4l6l1F2zsY6KzA~x5u7XlLSYjhlH4myo86BOCLQxumHFR15SeX3k0z453lT6dB~a2v5v9BxGcixMy5nli1anp5Zkg__",
+  "tags": ["Checklists"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}

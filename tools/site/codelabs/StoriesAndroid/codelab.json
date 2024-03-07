@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-03-07T21:07:51+05:30",
+  "id": "StoriesAndroid",
+  "duration": 8,
+  "title": "How to Integrate Stories",
+  "authors": "Shubhasai",
+  "summary": "How to Create Stories in Android SDK",
+  "source": "StoriesAndroid.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "android"
+  ],
+  "tags": [
+    "stories"
+  ],
+  "feedback": "https://zarin.io",
+  "url": "StoriesAndroid"
+}

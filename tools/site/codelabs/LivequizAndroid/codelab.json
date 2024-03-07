@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-03-07T21:08:04+05:30",
+  "id": "LivequizAndroid",
+  "duration": 8,
+  "title": "How to Integrate Livequiz",
+  "authors": "Shubhasai",
+  "summary": "How to Create a Livequiz in Android SDK",
+  "source": "LivequizAndroid.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "android"
+  ],
+  "tags": [
+    "livequiz"
+  ],
+  "feedback": "https://zarin.io",
+  "url": "LivequizAndroid"
+}

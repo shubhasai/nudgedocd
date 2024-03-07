@@ -1,0 +1,10 @@
+{
+  "title": "Nudges",
+  "description": "Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.",
+  "logoUrl": "https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqj4rx1701683687661.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=jIXoAH4QDIwtroaTPh0333FDr~1eZIDC2iobKmT7cXnPmHTTk9EYOA0ygmfvECQ5af7ve7dd08rY987C6ag9-qY7nZDCUeccuajHq-ubNu7-cR-Qshd~PFqnLkU5D~5Wbmq-XWDAScLdtdALJaSb4XoTil-mWLYsjZnCNp2~Sk-WMgSAEiytYUnZkWhHgk~KHp3sigz09xojIPyqVI4wNUajPtpChY-8uEwJX-dD83G17~02H7UAksyfsWZmK6n~3SfUIwSdURL-BVpAI82lsq4WSf3HpLoA-~tMcI2hiPY8CqYSSSu4vHYgSY8dZ~-I-wMYlH8Ix6usY7ZctWGrsg__",
+  "tags": ["nudges"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}

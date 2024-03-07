@@ -1,0 +1,10 @@
+{
+  "title": "Streaks",
+  "description": "Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.",
+  "logoUrl": "https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqpiwhv1701681997314.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=f4UN1PWxJW3PWWa0vpRLRXLDpneS11bKC8BR5bZLgC9e96uFOh89Ta18Wkr9jR2bynR9qnA8iTy1GgTTHGRyF-xjyndZcViPOPuQX~LkGCvOxERPpnWDLq8y7LZaFM7qU1EJ6btIUsrvQ0xkdpZvb-PgUf5VnrHHO5zFZsia7-pCd73L-K2cwwt6u1~BDhCsPDI43fYDB-QHQEn4xPd5GCNhIHTQ0Z83nbNW2uIyB4-z1U~DZHNSfLDUfBur-9av2DSIeTVTQzrq3P2mZ4ry7hRm4qIAY2vqcYxKd02Bbh~2PbI3yAFp30-N-kvFcfklRo9u~1iqAMydqRiRicg9ow__",
+  "tags": ["streaks"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}

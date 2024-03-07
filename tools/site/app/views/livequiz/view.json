@@ -1,0 +1,10 @@
+{
+  "title": "Livequiz",
+  "description": "Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.",
+  "logoUrl": "https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqq7bni1701683136702.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=TVAzEOA4KqElWMNHX5se2B9TV0uLsLDD19wZp97eRgRhZpXwlkK8Pr8mpYP92uXC-ZlwKKJK9Ea1cUjNdN2hhi4yhUxhnef4bdlZwM8Hq37d3q1a8bz8m1Eq3kDkTPUjKYRpjODFj5Tp5PGMP6E-~NA3trJrMsQjhQB1zgJGh4HBAoGRLeww8J0l~N6aMI4E1lVTD74oQHJ9LSJ9sn8dqKRby1R0C0aiBUpEC8mZkM~YZRT~8OqyJW0-l8sy-IzH5LoAG~Avh8xktKUVSxSB3NbGeJZijTGMCQ0lpLSD3rpdnr9tkLoEh0ImOFBUPU6ncrrIRy7zACPvUFrTJ4ZSnA__",
+  "tags": ["livequiz"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}

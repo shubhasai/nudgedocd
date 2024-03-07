@@ -1,0 +1,10 @@
+{
+  "title": "Surveys",
+  "description": "Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.",
+  "logoUrl": "https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqq5j741701683053168.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=wSyTuLBgPI2Ma8csE5k4XAPhLOh96ZEBxb-u3~1HgvQtMWWArLJREMIRTCkB1Hy7n8J3SLSH5f~h7vbBnYQOPTTt~axKh0qC~Br2Sh3mKQ1xNlou8HsKL6zhZUQSd3PQkFTpmQVLZcw4-mYKEptisKkkV73s17Jtb41CNW8XWaNufK11~SKK~dwTYv7NrpP5lOxOHYXAb-Wyd~C2YkWomE~TVhsPbRpibIwZKPX2F8ll0PXDZWGaYbm7U3iu45tChWjymznrr-bbOlwe4bq18bR35ylitHdbXfmNI1821HyeCMhWPRC6v3zZDcGjAl~7zGcpbzqWftvdw~hBuHvTPg__",
+  "tags": ["surveys"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}
