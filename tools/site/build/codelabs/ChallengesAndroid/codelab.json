@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-03-08T03:21:10+05:30",
+  "id": "ChallengesAndroid",
+  "duration": 8,
+  "title": "How to Integrate Challenges",
+  "authors": "Shubhasai",
+  "summary": "How to Create a Challenges in Android SDK",
+  "source": "ChallengesAndroid.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "android"
+  ],
+  "tags": [
+    "challenges"
+  ],
+  "feedback": "https://zarin.io",
+  "url": "ChallengesAndroid"
+}

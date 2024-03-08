@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-03-07T21:08:21+05:30",
+  "id": "ChecklistsAndroid",
+  "duration": 8,
+  "title": "How to Integrate Checklists",
+  "authors": "Shubhasai",
+  "summary": "How to Create a Checklist in Android SDK",
+  "source": "ChecklistsAndroid.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "android"
+  ],
+  "tags": [
+    "checklists"
+  ],
+  "feedback": "https://zarin.io",
+  "url": "ChecklistsAndroid"
+}

@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-03-07T21:15:11+05:30",
+  "id": "LeaderboardAndroid",
+  "duration": 8,
+  "title": "How to Integrate Leaderboard",
+  "authors": "Shubhasai",
+  "summary": "How to Create a Leaderboard in Android SDK",
+  "source": "LeaderboardAndroid.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "android"
+  ],
+  "tags": [
+    "leaderboard"
+  ],
+  "feedback": "https://zarin.io",
+  "url": "LeaderboardAndroid"
+}

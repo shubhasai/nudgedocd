@@ -2,6 +2,8 @@
 
 // Gulp
 const gulp = require('gulp');
+const fsExtra = require('fs-extra');
+const path = require('path');
 
 // Gulp plugins
 const babel = require('gulp-babel');
@@ -34,7 +36,7 @@ const fs = require('fs-extra');
 const gcs = require('./tasks/helpers/gcs');
 const glob = require('glob');
 const opts = require('./tasks/helpers/opts');
-const path = require('path');
+// const path = require('path');
 const serveStatic = require('serve-static');
 const spawn = childprocess.spawn;
 const swig = require('swig-templates');
@@ -112,9 +114,33 @@ gulp.task('clean', gulp.parallel(
   'clean:dist',
 ));
 
+
+
 // build:codelabs copies the codelabs from the directory into build.
+// gulp.task('build:codelabs', (done) => {
+//   copyFilteredCodelabs('build');
+//   done();
+// });
+
+
+
+
+
+function copyDirectoryContents(src, dest) {
+  fsExtra.ensureDirSync(dest); // Ensure the destination directory exists
+  fsExtra.copySync(src, dest, { overwrite: true });
+}
+
+// Modified build:codelabs task
 gulp.task('build:codelabs', (done) => {
-  copyFilteredCodelabs('build');
+  // Define the source directory of your codelabs. Adjust this path as needed.
+  // const codelabsSourceDir = path.join(__dirname, 'path/to/original/codelabs');
+  const codelabsSourceDir = path.join(__dirname, 'codelabs');
+  const codelabsDestDir = path.join(__dirname, 'build/codelabs');
+
+  // Copy codelabs from the source to the destination directory
+  copyDirectoryContents(codelabsSourceDir, codelabsDestDir);
+
   done();
 });
 

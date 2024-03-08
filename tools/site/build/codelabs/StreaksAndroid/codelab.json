@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-03-07T21:10:28+05:30",
+  "id": "StreaksAndroid",
+  "duration": 8,
+  "title": "How to Integrate Streaks",
+  "authors": "Shubhasai",
+  "summary": "How to Create a Streaks in Android SDK",
+  "source": "StreaksAndroid.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "android"
+  ],
+  "tags": [
+    "streaks"
+  ],
+  "feedback": "https://zarin.io",
+  "url": "StreaksAndroid"
+}
