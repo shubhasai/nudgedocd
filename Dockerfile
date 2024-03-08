@@ -22,8 +22,11 @@ COPY tools/site/ ./
 # Build your project (if needed)
 RUN gulp build --codelabs-dir=codelabs
 
+# Move into the build directory
+WORKDIR /usr/src/app/build
+
 # Expose the port your app runs on
 EXPOSE 8000
 
 # Define the command to start the HTTP server serving index.html
-CMD ["http-server", "build", "-p", "8000"]
+CMD ["http-server", "-p", "8000"]
