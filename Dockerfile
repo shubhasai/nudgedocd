@@ -10,6 +10,9 @@ COPY tools/site/package*.json ./
 # Install dependencies
 RUN npm install
 
+# Install gulp globally
+RUN npm install -g gulp
+
 # Copy the entire project directory into the container
 COPY tools/site/ ./
 
