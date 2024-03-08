@@ -13,11 +13,17 @@ RUN npm install
 # Install gulp globally
 RUN npm install -g gulp-cli
 
+# Install http-server globally
+RUN npm install -g http-server
+
 # Copy the entire project directory into the container
 COPY tools/site/ ./
+
+# Build your project (if needed)
+RUN gulp build --codelabs-dir=codelabs
 
 # Expose the port your app runs on
 EXPOSE 8000
 
-# Define the command to run your app
-CMD ["gulp", "serve", "--codelabs-dir=codelabs"]
+# Define the command to start the HTTP server serving index.html
+CMD ["http-server", "-p", "8000"]
