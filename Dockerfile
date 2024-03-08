@@ -22,8 +22,8 @@ COPY tools/site/ ./
 # Build your project (if needed)
 RUN gulp build --codelabs-dir=codelabs
 
-# Move into the build directory
-WORKDIR /usr/src/app/build
+# Move the build folder outside to the root directory
+RUN mv build/* . && rm -rf build && rm -rf node_modules
 
 # Expose the port your app runs on
 EXPOSE 8000
