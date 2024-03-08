@@ -11,7 +11,7 @@ COPY tools/site/package*.json ./
 RUN npm install
 
 # Install gulp globally
-RUN npm install -g gulp
+RUN npm install -g gulp-cli
 
 # Copy the entire project directory into the container
 COPY tools/site/ ./
