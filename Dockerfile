@@ -26,4 +26,4 @@ RUN gulp build --codelabs-dir=codelabs
 EXPOSE 8000
 
 # Define the command to start the HTTP server serving index.html
-CMD ["http-server", "-p", "8000"]
+CMD ["http-server", "build", "-p", "8000"]
