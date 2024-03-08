@@ -1,0 +1,255 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- <meta charset="utf-8">
+  <meta name="description" content="Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Stories"> -->
+  <!-- <meta name="application-name" content="Stories">
+  <link rel="canonical" href="https://example.com/stories/" />
+  <link rel="preconnect" href="https://www.google-analytics.com" /> -->
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-49880327-14', 'auto');
+    ga('send', 'pageview');
+    
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <!-- <title>Stories</title> -->
+  <title>Nudgenow Documentation</title>
+  <link rel="stylesheet" href="/styles/main.css">
+
+  
+
+  <link rel="import" href="/elements/elements.html">
+
+  <style is="custom-style">
+    :root {
+      --paper-tabs-selection-bar-color: currentcolor;
+      --paper-input-container-underline: {
+        display: none;
+      };
+      --paper-input-container-underline-focus: {
+        display: none;
+      };
+    }
+
+    .dropdown-filter {
+      --paper-input-container: {
+        padding: 8px;
+      }
+    }
+  </style>
+
+  <!-- <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
+  <meta name="apple-mobile-web-app-title" content="Stories"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/nudgelogo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#455a64">
+  <!-- <meta name="msapplication-TileColor" content="#455a64">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#455a64">
+
+  <meta name="og:type" property="og:type" content="website" />
+  <meta name="og:title" property="og:title" content="Stories" />
+  <meta name="og:description" property="og:description" content="Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home." />
+  <meta name="og:url" property="og:url" content="https://example.com/stories/" />
+  <meta name="og:site_name" property="og:site_name" content="Codelabs" />
+  <meta name="og:determiner" property="og:determiner" content="the" />
+  <meta name="og:locale" property="og:locale" content="en_US" />
+  <meta name="og:image" property="og:image" content="/images/og-image.png" />
+  <meta name="og:image:url" property="og:image:url" content="/images/og-image.png" />
+  <meta name="og:image:type" property="og:image:type" content="image/png" />
+  <meta name="og:image:width" property="og:image:width" content="1200" />
+  <meta name="og:image:height" property="og:image:height" content="1200" />
+  <meta name="og:image:alt" property="og:image:alt" content="Codelabs" />
+
+  <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" property="twitter:title" content="Stories" />
+  <meta name="twitter:description" property="twitter:description" content="Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home." />
+  <meta name="twitter:image" property="twitter:image" content="/images/og-image.png" />
+  <meta name="twitter:url" property="twitter:url" content="https://example.com/stories/" /> -->
+</head>
+
+<body id="app" is="body-bind" class="loading fullbleed view">
+  <paper-header-panel id="main" mode="standard" main>
+    
+    <!-- <div id="mainToolbar" class="paper-header">
+      <div class="site-width layout horizontal">
+        <a href="/">
+          <img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">
+        </a>
+        <div id="searchbar">
+          <paper-input-container no-label-float>
+            <paper-icon-button prefix icon="search"></paper-icon-button>
+            <label>Search</label>
+            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
+          </paper-input-container>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div id="mainToolbar" class="paper-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="site-width layout horizontal" style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-grow: 1;">
+        <a href="/" style="flex-shrink: 0;">
+          <img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">
+        </a>
+        <div id="searchbar" style="flex-grow: 1; display: flex; justify-content: flex-end;">
+          <paper-input-container no-label-float style="width: 30%;">
+            <paper-icon-button prefix icon="search"></paper-icon-button>
+            <label>Search</label>
+            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown" style="width: 100%;">
+          </paper-input-container>
+        </div>
+      </div>
+    </div> -->
+    <div id="mainToolbar" class="paper-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="site-width layout horizontal" style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-grow: 1;">
+        <a href="/" style="flex-shrink: 0;">
+          <img src="/images/LogoNudge.png" class="logo-devs" alt="Codelabs Logo">
+        </a>
+        <div id="searchbar" style="width: 30%; display: flex; justify-content: flex-end;border-radius: 7px;">
+          <paper-input-container no-label-float style="width: 100%;">
+            <paper-icon-button prefix icon="search"></paper-icon-button>
+            <label>Search</label>
+            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown" style="width: 100%;">
+          </paper-input-container>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    
+    <header id="banner" down>
+      <div class="site-width">
+        <div class="banner-description">
+            <img id="logo" src="https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqkmht1701683757281.svg?Expires=1712432465&amp;Key-Pair-Id=K23YHNDT5PIMVR&amp;Signature=mTU-85NQdowN11x0IDvdcqE0hnUxTfpkx3Iyctmhq0tfVdHnwqCB5fOJmZ6RwP7NQNGf4UdYVSdppPTJpA77kUaFD8Gz5uUnQ7D0fFnC9FSJ9hYEjhr7If9yD2Rh--dNXi788NBN9FoM8ugmyTf2zn8b-wMkIiwS4hlBln2tCxbnm7SudrXCaMoRjraSaqvMMvLyfN6kwrsTauVDAgmgaNTWJmc5bmZmqEMrLSAu1IyfhKIRKiZVK4So49YxfvvaQc9Au6v--TuhtrCCIHzaxZcvgSBwtTyS98RjjKkMV~tje2~EvJw7oWMq0fe960F-AYYm7MSSQsntTLKOP6lyTw__" alt="Event logo">
+            <div class="banner-meta">
+              <h3>Stories</h3>
+              <p>Come learn about Google Cloud Platform by completing codelabs and coding challenges! The following codelabs will step you through using different parts of Google Cloud Platform. These challenges cover a range of topics such as Compute Engine, App Engine, Kubernetes, Cloud Shell. Go to https://g.co/codelabs/vslive to find more codelabs you can try at home.</p>
+              
+            </div>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="filters" class="site-width layout horizontal center justified">
+        <div id="sortby">
+          <paper-tabs selected="0" noink on-iron-activate="sortBy">
+            <paper-tab>A-Z</paper-tab>
+            <paper-tab>Recent</paper-tab>
+            <paper-tab>Duration</paper-tab>
+          </paper-tabs>
+        </div>
+
+        </div>
+
+      <card-sorter id="cards" class="site-width" style="height: 100px;">
+        
+          
+            
+            <a href="/codelabs/StoriesAndroid/index.html?index=..%2F..stories" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Stories"
+               data-duration="8"
+               data-updated="2024-03-07T21:07:51+05:30"
+               data-tags="stories"
+               data-pin="">
+              <div class="description">How to Integrate Stories</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src="https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqkmht1701683757281.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=mTU-85NQdowN11x0IDvdcqE0hnUxTfpkx3Iyctmhq0tfVdHnwqCB5fOJmZ6RwP7NQNGf4UdYVSdppPTJpA77kUaFD8Gz5uUnQ7D0fFnC9FSJ9hYEjhr7If9yD2Rh--dNXi788NBN9FoM8ugmyTf2zn8b-wMkIiwS4hlBln2tCxbnm7SudrXCaMoRjraSaqvMMvLyfN6kwrsTauVDAgmgaNTWJmc5bmZmqEMrLSAu1IyfhKIRKiZVK4So49YxfvvaQc9Au6v--TuhtrCCIHzaxZcvgSBwtTyS98RjjKkMV~tje2~EvJw7oWMq0fe960F-AYYm7MSSQsntTLKOP6lyTw__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+      </card-sorter>
+
+      <div id="loading-placeholder" class="site-width">
+        Loading Codelabs, please wait...
+      </div>
+    </main>
+
+    <!-- <footer id="footer">
+      <div class="footer-wrapper site-width">
+        <div class="link-list">
+          <label>Connect</label>
+          <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+        <div class="link-list">
+          <label>Programs</label>
+          <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+        <div class="link-list">
+          <label>Developer Consoles</label>
+          <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+        <div class="link-list">
+          <label>Explore</label>
+           <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footerbar">
+      <div class="site-width layout horizontal center justified">
+        <span>
+          <a href="https://example.com">Terms</a>
+          &nbsp; | &nbsp;
+          <a href="https://example.com">Privacy</a>
+        </span>
+      </div>
+    </div> -->
+
+  </paper-header-panel>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>

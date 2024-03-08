@@ -1,0 +1,563 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- <meta charset="utf-8">
+  <meta name="description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Codelabs"> -->
+  <!-- <meta name="application-name" content="Codelabs">
+  <link rel="canonical" href="https://example.com/" />
+  <link rel="preconnect" href="https://www.google-analytics.com" /> -->
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-49880327-14', 'auto');
+    ga('send', 'pageview');
+    
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <!-- <title>Codelabs</title> -->
+  <title>Nudgenow Documentation</title>
+  <link rel="stylesheet" href="/styles/main.css">
+
+  
+
+  <link rel="import" href="/elements/elements.html">
+
+  <style is="custom-style">
+    :root {
+      --paper-tabs-selection-bar-color: currentcolor;
+      --paper-input-container-underline: {
+        display: none;
+      };
+      --paper-input-container-underline-focus: {
+        display: none;
+      };
+    }
+
+    .dropdown-filter {
+      --paper-input-container: {
+        padding: 8px;
+      }
+    }
+  </style>
+
+  <!-- <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
+  <meta name="apple-mobile-web-app-title" content="Codelabs"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/nudgelogo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/nudgelogo.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#455a64">
+  <!-- <meta name="msapplication-TileColor" content="#455a64">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#455a64">
+
+  <meta name="og:type" property="og:type" content="website" />
+  <meta name="og:title" property="og:title" content="Codelabs" />
+  <meta name="og:description" property="og:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application." />
+  <meta name="og:url" property="og:url" content="https://example.com/" />
+  <meta name="og:site_name" property="og:site_name" content="Codelabs" />
+  <meta name="og:determiner" property="og:determiner" content="the" />
+  <meta name="og:locale" property="og:locale" content="en_US" />
+  <meta name="og:image" property="og:image" content="/images/og-image.png" />
+  <meta name="og:image:url" property="og:image:url" content="/images/og-image.png" />
+  <meta name="og:image:type" property="og:image:type" content="image/png" />
+  <meta name="og:image:width" property="og:image:width" content="1200" />
+  <meta name="og:image:height" property="og:image:height" content="1200" />
+  <meta name="og:image:alt" property="og:image:alt" content="Codelabs" />
+
+  <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" property="twitter:title" content="Codelabs" />
+  <meta name="twitter:description" property="twitter:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application." />
+  <meta name="twitter:image" property="twitter:image" content="/images/og-image.png" />
+  <meta name="twitter:url" property="twitter:url" content="https://example.com/" /> -->
+</head>
+
+<body id="app" is="body-bind" class="loading fullbleed ">
+  <paper-header-panel id="main" mode="standard" main>
+    
+    <!-- <div id="mainToolbar" class="paper-header">
+      <div class="site-width layout horizontal">
+        <a href="/">
+          <img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">
+        </a>
+        <div id="searchbar">
+          <paper-input-container no-label-float>
+            <paper-icon-button prefix icon="search"></paper-icon-button>
+            <label>Search</label>
+            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
+          </paper-input-container>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div id="mainToolbar" class="paper-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="site-width layout horizontal" style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-grow: 1;">
+        <a href="/" style="flex-shrink: 0;">
+          <img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">
+        </a>
+        <div id="searchbar" style="flex-grow: 1; display: flex; justify-content: flex-end;">
+          <paper-input-container no-label-float style="width: 30%;">
+            <paper-icon-button prefix icon="search"></paper-icon-button>
+            <label>Search</label>
+            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown" style="width: 100%;">
+          </paper-input-container>
+        </div>
+      </div>
+    </div> -->
+    <div id="mainToolbar" class="paper-header" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="site-width layout horizontal" style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-grow: 1;">
+        <a href="/" style="flex-shrink: 0;">
+          <img src="/images/LogoNudge.png" class="logo-devs" alt="Codelabs Logo">
+        </a>
+        <div id="searchbar" style="width: 30%; display: flex; justify-content: flex-end;border-radius: 7px;">
+          <paper-input-container no-label-float style="width: 100%;">
+            <paper-icon-button prefix icon="search"></paper-icon-button>
+            <label>Search</label>
+            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown" style="width: 100%;">
+          </paper-input-container>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    
+    <header id="banner" down$="[[_toBoolean(selectedFilter)]]">
+      <div class="site-width">
+        
+        <h2 class="banner-title">Welcome to Nudge Documentation!</h2>
+        <div class="banner-description"
+             data-filter-selected$="[[_toBoolean(selectedFilter)]]">
+          <p class="banner-info">
+            Codelabs provide a guided, tutorial, hands-on
+            coding experience. Most codelabs will step you through the process
+            of integarting a Nudgenow SDKs into your application.
+            <br>
+            <a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a>
+          </p>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="filters" class="site-width layout horizontal center justified">
+        <div id="sortby">
+          <paper-tabs selected="0" noink on-iron-activate="sortBy">
+            <paper-tab>A-Z</paper-tab>
+            <paper-tab>Recent</paper-tab>
+            <paper-tab>Duration</paper-tab>
+          </paper-tabs>
+        </div>
+
+        
+        <paper-dropdown-menu
+          label="Choose an event"
+          class="dropdown-filter"
+          no-label-float
+          noink no-animations
+        >
+          <paper-listbox
+            id="eventList"
+            slot="dropdown-content"
+            class="dropdown-content"
+          ><a href="/challenges/" tabindex="-1">
+                  <paper-item>Challenges</paper-item>
+                </a>
+              <a href="/checklists/" tabindex="-1">
+                  <paper-item>Checklists</paper-item>
+                </a>
+              <a href="/leaderboard/" tabindex="-1">
+                  <paper-item>Leaderboard</paper-item>
+                </a>
+              <a href="/livequiz/" tabindex="-1">
+                  <paper-item>Livequiz</paper-item>
+                </a>
+              <a href="/nudges/" tabindex="-1">
+                  <paper-item>Nudges</paper-item>
+                </a>
+              <a href="/stories/" tabindex="-1">
+                  <paper-item>Stories</paper-item>
+                </a>
+              <a href="/streaks/" tabindex="-1">
+                  <paper-item>Streaks</paper-item>
+                </a>
+              <a href="/surveys/" tabindex="-1">
+                  <paper-item>Surveys</paper-item>
+                </a>
+              
+          </paper-listbox>
+        </paper-dropdown-menu>
+        </div>
+
+      <card-sorter id="cards" class="site-width" style="height: 100px;">
+        
+          
+            
+            <a href="/codelabs/ChallengesAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Challenges"
+               data-duration="8"
+               data-updated="2024-03-08T03:21:10+05:30"
+               data-tags="challenges"
+               data-pin="">
+              <div class="description">How to Integrate Challenges</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src=" https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqpzu631701682787451.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=i-zyvmaMUlNh64NmFCsrMHThf4wo838piDMpO42T41iS91TUxY1P0oHGgPB0t9aQvRPvxgyCloRZbnLfV60cz~Z-P5CIfCUnqm9CWR~jisFiYU65CsH1blVqrSSRoFYGbQGDyNKIKow2clvrBge7AUU4Dt8FJrlT0wCc2z56UX2pDYnlmYBgAP3xfHxMAZXNHfKwsXEjRtIwQWfmFxGwjEggxUWAiWUUJW9P26nnT86c2kyvYUc7w1EHo8LPddLRwvDvo5AQwZaQNZk0G0cPGQO6gtNAXs7L~F6g4V1C8Gmz~yzLxEwsda7TtBqxMOx8I6pVv2yDMMnVcOClAx2BfQ__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/ChecklistsAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Checklists"
+               data-duration="8"
+               data-updated="2024-03-07T21:08:21+05:30"
+               data-tags="checklists"
+               data-pin="">
+              <div class="description">How to Integrate Checklists</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src="https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqi65r1701683642799.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=jkBbmoR3IGnNU9JNndOSUknIVuLy4Dp3-udZ5vaREXxOZufHzjUbWrgDv9lGGFkX0JZgzyfC7Qysx62U~riWV0LeVNQOsBYXwq~CL4ACHDDCoPFge4uxu4C5vjLtQON7aHTqxVMMRefY02LCPbvblbld7ogaou8EgJo9SWDnyRNNlFsXSuCgjwEGW4LdFMnueaRvVDQC313VoPn-T9SMTtWURGJXwUqaHlTKf6YSU5ajMjTFmo~UPBkD~CWLM4l6l1F2zsY6KzA~x5u7XlLSYjhlH4myo86BOCLQxumHFR15SeX3k0z453lT6dB~a2v5v9BxGcixMy5nli1anp5Zkg__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/LeaderboardAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Leaderboard"
+               data-duration="8"
+               data-updated="2024-03-07T21:15:11+05:30"
+               data-tags="leaderboard"
+               data-pin="">
+              <div class="description">How to Integrate Leaderboard</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src="https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqpzu631701682787451.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=i-zyvmaMUlNh64NmFCsrMHThf4wo838piDMpO42T41iS91TUxY1P0oHGgPB0t9aQvRPvxgyCloRZbnLfV60cz~Z-P5CIfCUnqm9CWR~jisFiYU65CsH1blVqrSSRoFYGbQGDyNKIKow2clvrBge7AUU4Dt8FJrlT0wCc2z56UX2pDYnlmYBgAP3xfHxMAZXNHfKwsXEjRtIwQWfmFxGwjEggxUWAiWUUJW9P26nnT86c2kyvYUc7w1EHo8LPddLRwvDvo5AQwZaQNZk0G0cPGQO6gtNAXs7L~F6g4V1C8Gmz~yzLxEwsda7TtBqxMOx8I6pVv2yDMMnVcOClAx2BfQ__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/LivequizAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Livequiz"
+               data-duration="8"
+               data-updated="2024-03-07T21:08:04+05:30"
+               data-tags="livequiz"
+               data-pin="">
+              <div class="description">How to Integrate Livequiz</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src=" https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqq7bni1701683136702.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=TVAzEOA4KqElWMNHX5se2B9TV0uLsLDD19wZp97eRgRhZpXwlkK8Pr8mpYP92uXC-ZlwKKJK9Ea1cUjNdN2hhi4yhUxhnef4bdlZwM8Hq37d3q1a8bz8m1Eq3kDkTPUjKYRpjODFj5Tp5PGMP6E-~NA3trJrMsQjhQB1zgJGh4HBAoGRLeww8J0l~N6aMI4E1lVTD74oQHJ9LSJ9sn8dqKRby1R0C0aiBUpEC8mZkM~YZRT~8OqyJW0-l8sy-IzH5LoAG~Avh8xktKUVSxSB3NbGeJZijTGMCQ0lpLSD3rpdnr9tkLoEh0ImOFBUPU6ncrrIRy7zACPvUFrTJ4ZSnA__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/NudgesAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Nudges"
+               data-duration="8"
+               data-updated="2024-03-07T21:07:58+05:30"
+               data-tags="nudges"
+               data-pin="">
+              <div class="description">How to Integrate Nudges</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src=" https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqj4rx1701683687661.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=jIXoAH4QDIwtroaTPh0333FDr~1eZIDC2iobKmT7cXnPmHTTk9EYOA0ygmfvECQ5af7ve7dd08rY987C6ag9-qY7nZDCUeccuajHq-ubNu7-cR-Qshd~PFqnLkU5D~5Wbmq-XWDAScLdtdALJaSb4XoTil-mWLYsjZnCNp2~Sk-WMgSAEiytYUnZkWhHgk~KHp3sigz09xojIPyqVI4wNUajPtpChY-8uEwJX-dD83G17~02H7UAksyfsWZmK6n~3SfUIwSdURL-BVpAI82lsq4WSf3HpLoA-~tMcI2hiPY8CqYSSSu4vHYgSY8dZ~-I-wMYlH8Ix6usY7ZctWGrsg__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/StoriesAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Stories"
+               data-duration="8"
+               data-updated="2024-03-07T21:07:51+05:30"
+               data-tags="stories"
+               data-pin="">
+              <div class="description">How to Integrate Stories</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src="https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqqkmht1701683757281.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=mTU-85NQdowN11x0IDvdcqE0hnUxTfpkx3Iyctmhq0tfVdHnwqCB5fOJmZ6RwP7NQNGf4UdYVSdppPTJpA77kUaFD8Gz5uUnQ7D0fFnC9FSJ9hYEjhr7If9yD2Rh--dNXi788NBN9FoM8ugmyTf2zn8b-wMkIiwS4hlBln2tCxbnm7SudrXCaMoRjraSaqvMMvLyfN6kwrsTauVDAgmgaNTWJmc5bmZmqEMrLSAu1IyfhKIRKiZVK4So49YxfvvaQc9Au6v--TuhtrCCIHzaxZcvgSBwtTyS98RjjKkMV~tje2~EvJw7oWMq0fe960F-AYYm7MSSQsntTLKOP6lyTw__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/StreaksAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Streaks"
+               data-duration="8"
+               data-updated="2024-03-07T21:10:28+05:30"
+               data-tags="streaks"
+               data-pin="">
+              <div class="description">How to Integrate Streaks</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src=" https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqpiwhv1701681997314.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=f4UN1PWxJW3PWWa0vpRLRXLDpneS11bKC8BR5bZLgC9e96uFOh89Ta18Wkr9jR2bynR9qnA8iTy1GgTTHGRyF-xjyndZcViPOPuQX~LkGCvOxERPpnWDLq8y7LZaFM7qU1EJ6btIUsrvQ0xkdpZvb-PgUf5VnrHHO5zFZsia7-pCd73L-K2cwwt6u1~BDhCsPDI43fYDB-QHQEn4xPd5GCNhIHTQ0Z83nbNW2uIyB4-z1U~DZHNSfLDUfBur-9av2DSIeTVTQzrq3P2mZ4ry7hRm4qIAY2vqcYxKd02Bbh~2PbI3yAFp30-N-kvFcfklRo9u~1iqAMydqRiRicg9ow__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/SurveysAndroid/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-android"
+               data-category="android"
+               data-title="How to Integrate Surveys"
+               data-duration="8"
+               data-updated="2024-03-07T21:14:54+05:30"
+               data-tags="surveys"
+               data-pin="">
+              <div class="description">How to Integrate Surveys</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src=" https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqq5j741701683053168.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=wSyTuLBgPI2Ma8csE5k4XAPhLOh96ZEBxb-u3~1HgvQtMWWArLJREMIRTCkB1Hy7n8J3SLSH5f~h7vbBnYQOPTTt~axKh0qC~Br2Sh3mKQ1xNlou8HsKL6zhZUQSd3PQkFTpmQVLZcw4-mYKEptisKkkV73s17Jtb41CNW8XWaNufK11~SKK~dwTYv7NrpP5lOxOHYXAb-Wyd~C2YkWomE~TVhsPbRpibIwZKPX2F8ll0PXDZWGaYbm7U3iu45tChWjymznrr-bbOlwe4bq18bR35ylitHdbXfmNI1821HyeCMhWPRC6v3zZDcGjAl~7zGcpbzqWftvdw~hBuHvTPg__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 7, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon android-icon"></div>
+                <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+      </card-sorter>
+
+      <div id="loading-placeholder" class="site-width">
+        Loading Codelabs, please wait...
+      </div>
+    </main>
+
+    <!-- <footer id="footer">
+      <div class="footer-wrapper site-width">
+        <div class="link-list">
+          <label>Connect</label>
+          <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+        <div class="link-list">
+          <label>Programs</label>
+          <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+        <div class="link-list">
+          <label>Developer Consoles</label>
+          <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+        <div class="link-list">
+          <label>Explore</label>
+           <ul>
+            <li><a href="https://www.example.com/">Example</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footerbar">
+      <div class="site-width layout horizontal center justified">
+        <span>
+          <a href="https://example.com">Terms</a>
+          &nbsp; | &nbsp;
+          <a href="https://example.com">Privacy</a>
+        </span>
+      </div>
+    </div> -->
+
+  </paper-header-panel>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
