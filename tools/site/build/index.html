@@ -148,7 +148,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             coding experience. Most codelabs will step you through the process
             of integarting a Nudgenow SDKs into your application.
             <br>
-            <a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a>
+            <a href="https://github.com/googlecodelabs/tools">This page is powered by the Claat Tool by Google. Click here to check Codelab tools on GitHub.</a>
           </p>
           </div>
       </div>
@@ -202,7 +202,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               
           </paper-listbox>
         </paper-dropdown-menu>
-        </div>
+        <paper-dropdown-menu
+          label="Filter by category"
+          class="dropdown-filter"
+          no-label-float
+          noink no-animations
+        >
+          <paper-listbox
+            id="categorylist"
+            slot="dropdown-content"
+            class="dropdown-content"
+            on-iron-activate="onCategoryActivate"
+            attr-for-selected="filter"
+          >
+              <paper-item filter="android">android</paper-item>
+                <paper-item filter="flutter">flutter</paper-item>
+                
+          </paper-listbox>
+        </paper-dropdown-menu></div>
 
       <card-sorter id="cards" class="site-width" style="height: 100px;">
         
@@ -213,7 +230,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                data-category="android"
                data-title="How to Integrate Challenges"
                data-duration="8"
-               data-updated="2024-03-08T03:21:10+05:30"
+               data-updated="2024-03-09T12:55:14+05:30"
                data-tags="challenges"
                data-pin="">
               <div class="description">How to Integrate Challenges</div>
@@ -236,7 +253,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               <div class="card-duration">
                 <span>8 min </span>
-                <span>Updated Mar 7, 2024</span>
+                <span>Updated Mar 9, 2024</span>
               </div>
               <div class="card-footer">
                 <div class="category-icon android-icon"></div>
@@ -507,6 +524,44 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div class="card-footer">
                 <div class="category-icon android-icon"></div>
                 <paper-button class="android-bg">Start</paper-button>
+              </div>
+            </a>
+          
+          
+            
+            <a href="/codelabs/ChallengesFlutter/index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-flutter"
+               data-category="flutter"
+               data-title="How to Integrate Challenges"
+               data-duration="8"
+               data-updated="2024-03-09T13:30:27+05:30"
+               data-tags="challenges"
+               data-pin="">
+              <div class="description">How to Integrate Challenges</div>
+              <div style=
+              "display: flex; 
+              justify-content: center; 
+              justify-items: center; 
+              flex-direction: column;
+              padding-bottom: 3%;
+              padding-top: 3%;
+              padding-left: 5%;
+              padding-right: 5%;
+              ">
+              
+              <!-- <img class="banner-image"></div> -->
+              <img src=" https://d2n3gmf7pmc1r8.cloudfront.net/imagexb6i644lpqpzu631701682787451.svg?Expires=1712432465&Key-Pair-Id=K23YHNDT5PIMVR&Signature=i-zyvmaMUlNh64NmFCsrMHThf4wo838piDMpO42T41iS91TUxY1P0oHGgPB0t9aQvRPvxgyCloRZbnLfV60cz~Z-P5CIfCUnqm9CWR~jisFiYU65CsH1blVqrSSRoFYGbQGDyNKIKow2clvrBge7AUU4Dt8FJrlT0wCc2z56UX2pDYnlmYBgAP3xfHxMAZXNHfKwsXEjRtIwQWfmFxGwjEggxUWAiWUUJW9P26nnT86c2kyvYUc7w1EHo8LPddLRwvDvo5AQwZaQNZk0G0cPGQO6gtNAXs7L~F6g4V1C8Gmz~yzLxEwsda7TtBqxMOx8I6pVv2yDMMnVcOClAx2BfQ__
+                    " alt="Here is an Image" width="100%" >
+                
+                  </div>
+
+              <div class="card-duration">
+                <span>8 min </span>
+                <span>Updated Mar 9, 2024</span>
+              </div>
+              <div class="card-footer">
+                <div class="category-icon flutter-icon"></div>
+                <paper-button class="flutter-bg">Start</paper-button>
               </div>
             </a>
           

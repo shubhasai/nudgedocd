@@ -3,23 +3,23 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2024-03-09T12:55:14+05:30",
-  "id": "ChallengesAndroid",
+  "updated": "2024-03-09T13:30:27+05:30",
+  "id": "ChallengesFlutter",
   "duration": 8,
   "title": "How to Integrate Challenges",
   "authors": "Shubhasai",
-  "summary": "How to Create a Challenges in Android SDK",
-  "source": "ChallengesAndroid.md",
+  "summary": "How to Create a Challenges in Flutter SDK",
+  "source": "ChallengesFlutter.md",
   "theme": "",
   "status": [
     "published"
   ],
   "category": [
-    "android"
+    "flutter"
   ],
   "tags": [
     "challenges"
   ],
   "feedback": "https://zarin.io",
-  "url": "ChallengesAndroid"
+  "url": "ChallengesFlutter"
 }

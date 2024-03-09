@@ -1,6 +1,6 @@
-summary: How to Create a Challenges in Android SDK
-id: ChallengesAndroid
-categories: android
+summary: How to Create a Challenges in Flutter SDK
+id: ChallengesFlutter
+categories: flutter
 tags: Challenges
 status: Published
 authors: Shubhasai
@@ -14,15 +14,16 @@ Duration: 1
 - Min SDK Level: 24 
 - Kotlin Version: 1.7.10 
 - JAVA: 1.8 
-- Android Gradle Plugin Version: 7.0.4
+- Android Gradle Plugin Version: 7.1.1
 - Gradle: 7.2
+- Minimum Compile SDK: 34
 
 <!-- ------------------------ -->
 ## Adding Dependencies
 Duration: 1
 
 In order to use Nudge Experience you have to Install Nudge Core and the Experience (in this case Challenges SDK). In order to add the below dependencies, follow the below steps.
--Step: 1 Add the below URL to the setting.gradle file of your project.
+- Step: 1 Add the below URL to the setting.gradle file of your project.
 
 ```groovy
 maven{
@@ -30,12 +31,13 @@ maven{
      }
 ```
 ```kotlin
+
 maven {
             url = uri("https://github.com/nudgenow/libraries/raw/main/nudge_android/")
         }
 ```
 
--Step: 2 Add the NudgeCore and Challenges dependency to your project.
+- Step: 2 Add the NudgeCore and Challenges dependency to your project.
 
 ```groovy
 implementation 'com.nudgenow.nudge_android:nudge_core:1.0.0'
@@ -52,13 +54,10 @@ Duration: 3
 To initialise Nudge SDK in your code, You need to follow below steps
 - Step 1
 ### Initialise Nudge Class
+> aside negative
+> 🚧 **Note:**`apiKey` (required): The secret key obtained from the settings section in the Nudge dashboard, is used for authentication.
 
 - Initialize the Nudge class with a reusable variable name and access all its functions through it.
-
-> 🚧 
-> 
-> **Note:**`apiKey` (required): The secret key obtained from the settings section in the Nudge dashboard, is used for authentication.
-
 ```java Java
 Nudge nudge = new Nudge(apiKey);
 ```
@@ -70,25 +69,8 @@ To get your API Key, follow these steps:
 2. Create an account on Nudge's Dashboard
 3. In the settings tab, you will obtain a unique secret key. Use this secret key while initializing the package.
 
-### Info Boxes
-Plain Text followed by green and yellow info boxes 
-
-Negative
-: This will appear in a yellow info box.
-
-Positive
-: This will appear in a green info box.
-
-You created info boxes!
-<div class="alert alert-info" role="alert">
-<h3 class="alert-heading">Note</h3>
-
-An example of a nicely formatted box
-
-</div>
-
 ### Initialise Nudge Provider
-
+> aside positive
 > 📘 **Info:** Nudge core gives you the core capabilities which include tracking events and users. But to use various features that Nudge has to offer, you need to add the respective plugins for those features.
 
 - The plugin for Checklists is called `ChallengesUi`

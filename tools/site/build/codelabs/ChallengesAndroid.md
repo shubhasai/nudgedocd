@@ -70,6 +70,23 @@ To get your API Key, follow these steps:
 2. Create an account on Nudge's Dashboard
 3. In the settings tab, you will obtain a unique secret key. Use this secret key while initializing the package.
 
+### Info Boxes
+Plain Text followed by green and yellow info boxes 
+
+Negative
+: This will appear in a yellow info box.
+
+Positive
+: This will appear in a green info box.
+
+You created info boxes!
+<div class="alert alert-info" role="alert">
+<h3 class="alert-heading">Note</h3>
+
+An example of a nicely formatted box
+
+</div>
+
 ### Initialise Nudge Provider
 
 > 📘 **Info:** Nudge core gives you the core capabilities which include tracking events and users. But to use various features that Nudge has to offer, you need to add the respective plugins for those features.

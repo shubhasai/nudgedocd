@@ -4,6 +4,8 @@
 const gulp = require('gulp');
 const fsExtra = require('fs-extra');
 const path = require('path');
+const { exec } = require('child_process');
+const fsclaat = require('fs');
 
 // Gulp plugins
 const babel = require('gulp-babel');
@@ -121,6 +123,30 @@ gulp.task('clean', gulp.parallel(
 //   copyFilteredCodelabs('build');
 //   done();
 // });
+function runCommand(command, cwd) {
+  return new Promise((resolve, reject) => {
+    exec(command, { cwd }, (err, stdout, stderr) => {
+      if (err) {
+        reject(stderr);
+      } else {
+        resolve(stdout);
+      }
+    });
+  });
+}
+
+// Task to export all codelabs
+gulp.task('export:codelabs', async () => {
+  const codelabsDir = path.join(__dirname, 'codelabs');
+  const files = fsclaat.readdirSync(codelabsDir);
+
+  for (const file of files) {
+    if (path.extname(file) === '.md') {
+      await runCommand(`claat export ${file}`, codelabsDir);
+      console.log(`Exported ${file}`);
+    }
+  }
+});
 
 
 
@@ -255,6 +281,7 @@ gulp.task('build:vulcanize', () => {
 
 // build builds all the assets
 gulp.task('build', gulp.series(
+  'export:codelabs',
   'clean',
   'build:codelabs',
   'build:css',

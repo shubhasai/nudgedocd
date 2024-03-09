@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>How to Integrate Leaderboard</title>
+  <title>How to Integrate Challenges</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
@@ -23,8 +23,8 @@
   <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   codelab-ga4id=""
-                  id="LeaderboardAndroid"
-                  title="How to Integrate Leaderboard"
+                  id="ChallengesFlutter"
+                  title="How to Integrate Challenges"
                   environment="web"
                   feedback-link="https://zarin.io">
     
@@ -34,15 +34,19 @@
 <li>Min SDK Level: 24</li>
 <li>Kotlin Version: 1.7.10</li>
 <li>JAVA: 1.8</li>
-<li>Android Gradle Plugin Version: 7.0.4</li>
+<li>Android Gradle Plugin Version: 7.1.1</li>
 <li>Gradle: 7.2</li>
+<li>Minimum Compile SDK: 34</li>
 </ul>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Adding Dependencies" duration="1">
-        <p>In order to use Nudge Experience you have to Install Nudge Core and the Experience (in this case Leaderboard SDK). In order to add the below dependencies, follow the below steps. -Step: 1 Add the below URL to the setting.gradle file of your project.</p>
+        <p>In order to use Nudge Experience you have to Install Nudge Core and the Experience (in this case Challenges SDK). In order to add the below dependencies, follow the below steps.</p>
+<ul>
+<li>Step: 1 Add the below URL to the setting.gradle file of your project.</li>
+</ul>
 <pre><code language="language-groovy" class="language-groovy">maven{
             url &#34;https://github.com/nudgenow/libraries/raw/main/nudge_android/&#34;
      }
@@ -51,10 +55,12 @@
             url = uri(&#34;https://github.com/nudgenow/libraries/raw/main/nudge_android/&#34;)
         }
 </code></pre>
-<p>-Step: 2 Add the NudgeCore and Challenges dependency to your project.</p>
+<ul>
+<li>Step: 2 Add the NudgeCore and Challenges dependency to your project.</li>
+</ul>
 <pre><code language="language-groovy" class="language-groovy">implementation &#39;com.nudgenow.nudge_android:nudge_core:1.0.0&#39;
 </code></pre>
-<pre><code language="language-kotlin" class="language-kotlin">implementation (&#34;com.nudgenow.nudge_android:leaderboard:1.0.0&#34;)
+<pre><code language="language-kotlin" class="language-kotlin">implementation (&#34;com.nudgenow.nudge_android:challenges:1.0.0&#34;)
 </code></pre>
 
 
@@ -66,11 +72,11 @@
 <li>Step 1</li>
 </ul>
 <h2 is-upgraded>Initialise Nudge Class</h2>
+<aside class="warning"><p> 🚧 <strong>Note:</strong><code>apiKey</code> (required): The secret key obtained from the settings section in the Nudge dashboard, is used for authentication.</p>
+</aside>
 <ul>
 <li>Initialize the Nudge class with a reusable variable name and access all its functions through it.</li>
 </ul>
-<p>🚧</p>
-<p><strong>Note:</strong><code>apiKey</code> (required): The secret key obtained from the settings section in the Nudge dashboard, is used for authentication.</p>
 <pre><code language="language-java" class="language-java">Nudge nudge = new Nudge(apiKey);
 </code></pre>
 <pre><code language="language-kotlin" class="language-kotlin">val nudge: Nudge = Nudge(apiKey)
@@ -82,7 +88,8 @@
 <li>In the settings tab, you will obtain a unique secret key. Use this secret key while initializing the package.</li>
 </ol>
 <h2 is-upgraded>Initialise Nudge Provider</h2>
-<p>📘 <strong>Info:</strong> Nudge core gives you the core capabilities which include tracking events and users. But to use various features that Nudge has to offer, you need to add the respective plugins for those features.</p>
+<aside class="special"><p> 📘 <strong>Info:</strong> Nudge core gives you the core capabilities which include tracking events and users. But to use various features that Nudge has to offer, you need to add the respective plugins for those features.</p>
+</aside>
 <ul>
 <li>The plugin for Checklists is called <code>ChallengesUi</code></li>
 <li>Initialize an instance of <code>ChallengesUi</code> and pass them into your <code>NudgeProvider</code> instance as a list.</li>
@@ -210,7 +217,7 @@ Nudge.track(type = &#34;EVENT_TYPE&#34;, properties = eventProperties)
     
       <google-codelab-step label="That&#39;s it!" duration="1">
         <h2 is-upgraded>Congrats</h2>
-<p>You have sucessfully added the Leaderboard SDK to you App.</p>
+<p>You have sucessfully added the Challenges SDK to you App.</p>
 
 
       </google-codelab-step>
