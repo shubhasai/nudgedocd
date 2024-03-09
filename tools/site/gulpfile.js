@@ -281,7 +281,7 @@ gulp.task('build:vulcanize', () => {
 
 // build builds all the assets
 gulp.task('build', gulp.series(
-  // 'export:codelabs',
+  'export:codelabs',
   'clean',
   'build:codelabs',
   'build:css',
