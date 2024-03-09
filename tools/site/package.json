@@ -39,10 +39,6 @@
     "vulcanize": "^1.16.0",
     "yargs": "^12.0.4"
   },
-  "scripts": {
-    "install-claat": "curl -L https://github.com/googlecodelabs/tools/releases/download/v2.2.5/claat-darwin-amd64 -o ./claat && chmod +x ./claat",
-    "build": "npm run install-claat && gulp build"
-  },  
   "engines": {
     "node": ">=0.10.0"
   },
